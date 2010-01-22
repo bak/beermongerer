@@ -5,7 +5,7 @@ require 'json'
 
 task :cron do
   puts "Building data file at #{Time.now} ..."
-  data_file = 'data/data.json'
+  data_file = File.dirname(__FILE__) + '/../../data/data.json'
 
   if (File.exist?(data_file) && (Time.now - File.new(data_file).mtime >= 21600)) || !File.exist?(data_file)
     File.open(data_file,'w') do |f|
