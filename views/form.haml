@@ -1,0 +1,37 @@
+%html
+  %head
+    %meta{:name => 'viewport', :content => 'width=320', 'user-scalable' => 'no'}
+    %title
+      Beermongerer
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen', :href => '/styles/screen.css'}
+    %link{:type => 'text/css', :rel => 'stylesheet', :media => 'screen', :href => '/styles/jquery.autocomplete.css'}
+    %script{:type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'}
+    %script{:type => 'text/javascript', :src => 'http://dev.jquery.com/view/trunk/plugins/autocomplete/jquery.autocomplete.js'}
+  %body
+    #page
+      %p
+        //%img{:src => '/images/beers.png'}
+      %h1
+        The Beermongerer
+      - if @data
+        %form
+          %input{:type => :text, :id => :query}
+      - else
+        %p
+          %strong
+            Data not found. Whoops.
+      #footer
+        %p
+          by
+          %a{:href => 'http://deraill.com', :title => 'Deraill :: Simple things by a simple boy'}
+            Deraill
+      %script
+        = "var data = #{@data};"
+        $("#query").autocomplete(data, {
+        matchContains: true,
+        formatItem: function(item) {
+        return item.text;
+        }
+        }).result(function(event, item) {
+        location.href = item.url;
+        });
