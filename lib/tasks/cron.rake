@@ -1,5 +1,5 @@
-task :cron do
+task :cron => :environment do
   puts "Building data file at #{Time.now} ..."
-  puts "testing ..."
+  Beermongerer::DataFile.test
   puts "done."
 end
