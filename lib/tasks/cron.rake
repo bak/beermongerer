@@ -19,7 +19,7 @@ task :cron do
         document = Hpricot(open(url_base + alpha_index_path + alpha))
         elements = document/"#colTwo"/"ul"/"li"/"a"
         elements.each do |element|
-          data << {:text => element.inner_html, :url => (url_base + element.attributes['href'])}
+          data << {:text => element.inner_html.strip.gsub(/\*$/, ' (out of stock)'), :url => (url_base + element.attributes['href'])}
         end
       end
       f.puts data.to_json
