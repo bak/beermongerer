@@ -39,7 +39,7 @@
             %br/
             %em
               Last indexed:
-              = @last_modified.strftime("%A, %B %d at %I:%M")
+              = @last_modified.strftime("%A, %B %d at %I:%M %p")
       %script
         = "var data = #{@data};"
         $("#query").autocomplete(data, {
