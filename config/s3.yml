@@ -1,0 +1,14 @@
+development:
+  bucket: beermongerer_development
+  access_key_id: AKIAI4EAO2ZH7KVYFG4Q
+  secret_access_key: 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
+
+test:
+  bucket: beermongerer_test
+  access_key_id: AKIAI4EAO2ZH7KVYFG4Q
+  secret_access_key: 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
+
+production:
+  bucket: beermongerer
+  access_key_id: AKIAI4EAO2ZH7KVYFG4Q
+  secret_access_key: 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
