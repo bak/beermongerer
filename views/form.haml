@@ -22,9 +22,13 @@
             Data not found. Whoops.
       #footer
         %p
-          by
+          Made by
           %a{:href => 'http://deraill.com', :title => 'Deraill :: Simple things by a simple boy'}
             Deraill
+          %br/
+          Searches beers and breweries listed at
+          %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}
+            The Beermongers
       %script
         = "var data = #{@data};"
         $("#query").autocomplete(data, {
