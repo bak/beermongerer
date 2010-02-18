@@ -4,16 +4,16 @@ require 'open-uri'
 require 'hpricot'
 require 'json'
 
-task :get_data do
+task :cron do
   puts "It is #{Time.now} ..."
   
   begin
     # make the AWS connection
     AWS::S3::Base.establish_connection!( 
-      :access_key_id => 'AKIAI4EAO2ZH7KVYFG4Q', 
-      :secret_access_key => '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',
+      :access_key_id => '***********', 
+      :secret_access_key => '***********',
       :use_ssl => true,
-      :server => 'beermongerer.s3.amazonaws.com'
+      :server => '***********'
     )
     
     filename = 'data.json'
