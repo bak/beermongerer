@@ -22,9 +22,18 @@
             Data not found. Whoops.
       #footer
         %p
-          by
-          %a{:href => 'http://deraill.com', :title => 'Deraill :: Simple things by a simple boy'}
-            Deraill
+          This is an index of beers stocked by
+          %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}>= ' The Beermongers'
+          , a totally awesome bottle shop in Portland Oregon. It is only updated once per day, so follow the links to each beer's page at
+          %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}= ' thebeermongers.com'
+          to find the freshest data.
+          %br/
+          %br/
+          Also, only beer names (including the brewery names) are indexed, not their descriptions, so this works best if you're looking for a specific bottle or common label.
+          %br/
+          %br/
+          Made by
+          %a{:href => 'http://deraill.com', :title => 'Deraill :: Simple things by a simple boy'} Deraill          
       %script
         = "var data = #{@data};"
         $("#query").autocomplete(data, {
