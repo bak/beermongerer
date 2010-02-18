@@ -2,6 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'aws/s3'
+require 'tzinfo'
+
+$tz = TZInfo::Timezone.get('America/Los_Angeles')
 
 get '/' do
   begin
@@ -15,7 +18,9 @@ get '/' do
     
     filename = 'data.json'
     if AWS::S3::S3Object.exists?(filename)
-      @data = AWS::S3::S3Object.find(filename).value.chomp
+      data_s3_object = AWS::S3::S3Object.find(filename)
+      @data = data_s3_object.value.chomp
+      @last_modified = $tz.utc_to_local(data_s3_object.last_modified.utc)
     end
   rescue Exception => e
     
