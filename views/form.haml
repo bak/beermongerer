@@ -22,18 +22,24 @@
             Data not found. Whoops.
       #footer
         %p
-          This is an index of beers stocked by
+          This is a searchable index of beers stocked by
           %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}>= ' The Beermongers'
-          , a bottle shop in Portland Oregon. It's purpose is to help search their stock quickly, but it's only updated once per day&mdash;so follow the links to each beer's page at
-          %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}= ' thebeermongers.com'
-          to find the freshest data. Only beer names (including the brewery names) are indexed&mdash;not their descriptions&mdash;so this works best if you have a good idea of what you're looking for.
+          , a bottle shop in Portland, Oregon. 
+          %br/
+          %br/
+          Its purpose is to help you search their stock quickly, but it only scans
+          %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'} thebeermongers.com
+          once per day, so the information may be a little stale. Go there for the freshest data. 
+          %br/
+          %br/
+          Only beer names (including the brewery names) are indexed&mdash;not their descriptions&mdash;so this works best if you have a good idea of what you're looking for.
           %br/
           %br/
           Made by
-          %a{:href => 'http://deraill.com', :title => 'Deraill :: Simple things by a simple boy'}>= ' Deraill'
-          \.
+          %a{:href => 'http://deraill.com', :title => 'Deraill :: Simple things by a simple boy'} Deraill
+          because he likes to research before he shops&mdash;hope you find it useful.
           %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'} The Beermongers
-          do not run or endorse this site.
+          do not run or endorse this web site.
           - if @last_modified
             %br/
             %br/
