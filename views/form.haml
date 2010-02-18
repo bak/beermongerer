@@ -10,7 +10,7 @@
   %body
     #page
       %p
-        //%img{:src => '/images/beers.png'}
+        %img{:src => '/images/beers.png'}
       %h1
         The Beermongerer
       - if @data
@@ -24,9 +24,9 @@
         %p
           This is an index of beers stocked by
           %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}>= ' The Beermongers'
-          , a bottle shop in Portland Oregon. It should make searching their stock easier, but it's only updated once per day&mdash;so follow the links to each beer's page at
+          , a bottle shop in Portland Oregon. It's purpose is to help search their stock quickly, but it's only updated once per day&mdash;so follow the links to each beer's page at
           %a{:href => 'http://thebeermongers.com', :title => 'The Beermongers'}= ' thebeermongers.com'
-          to find the freshest data. Only beer names (including the brewery names) are indexed&mdash;not their descriptions&mdash;so this works best if you're looking for a specific bottle or common label.
+          to find the freshest data. Only beer names (including the brewery names) are indexed&mdash;not their descriptions&mdash;so this works best if you have a good idea of what you're looking for.
           %br/
           %br/
           Made by
