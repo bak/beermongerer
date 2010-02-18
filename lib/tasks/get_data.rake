@@ -3,7 +3,7 @@ require 'rubygems'
 require 'hpricot'
 require 'json'
 
-task :cron do
+task :get_data do
   puts "Building data file at #{Time.now} ..."
   data_file = File.dirname(__FILE__) + '/../../data/data.json'
 
