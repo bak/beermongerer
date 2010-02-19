@@ -2,7 +2,7 @@
   padding: 0;
   margin-left:7px;
   background-color: #FFF;
-/*  overflow: hidden;*/
+  overflow: hidden;
   z-index: 99999;
 }
 

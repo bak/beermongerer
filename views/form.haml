@@ -12,7 +12,7 @@
       %p
         %img{:src => '/images/beers.png'}
       %h1
-        The Beermongerer
+        Beermongerer
       - if @data
         %form
           %input{:type => :text, :id => :query}
@@ -50,6 +50,8 @@
         = "var data = #{@data};"
         $("#query").autocomplete(data, {
         matchContains: true,
+        scroll: false,
+        max: 250,
         formatItem: function(item) {
         return item.text;
         }
