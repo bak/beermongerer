@@ -4,6 +4,8 @@ require 'haml'
 require 'aws/s3'
 require 'tzinfo'
 
+set :haml, { :format => :html5 }
+
 $tz = TZInfo::Timezone.get('America/Los_Angeles')
 
 get '/' do
