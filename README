@@ -1,3 +1,7 @@
+# beermongerer
+
+beermongerer scrapes my favorite Portland bottle shop's website every night. Yum.
+
 # Installation
 
 Replace config/s3config.bogus.rb with config/s3config.rb, containing your s3 authentication values. Also, replace all the copy, and probably the scraper in lib/tasks/cron.rake, unless you're scraping the same site I am. Upload to heroku.
