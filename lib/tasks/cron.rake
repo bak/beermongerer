@@ -10,10 +10,10 @@ task :cron do
   begin
     # make the AWS connection
     AWS::S3::Base.establish_connection!( 
-      :access_key_id => '***********', 
-      :secret_access_key => '***********',
+      :access_key_id => S3_CONFIG[:access_key_id], 
+      :secret_access_key => S3_CONFIG[:secret_access_key],
       :use_ssl => true,
-      :server => '***********'
+      :server => S3_CONFIG[:server]
     )
     
     filename = 'data.json'
