@@ -3,6 +3,7 @@ require 'aws/s3'
 require 'open-uri'
 require 'hpricot'
 require 'json'
+require File.expand_path(File.dirname(__FILE__) + "/../../config/s3config.rb")
 
 task :cron do
   puts "It is #{Time.now} ..."
