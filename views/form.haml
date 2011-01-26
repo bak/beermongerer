@@ -53,13 +53,9 @@
               = @last_modified.strftime("%A, %B %d at %I:%M %p")
       %script
         = "var data = #{@data};"
-        $("#query").autocomplete(data, {
-        matchContains: true,
-        scroll: false,
-        max: 250,
-        formatItem: function(item) {
-        return item.text;
+        $("#query").autocomplete({
+        source: data,
+        select: function( event, ui ) {
+        location.href = ui.item.value;
         }
-        }).result(function(event, item) {
-        location.href = item.url;
         });

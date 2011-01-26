@@ -29,7 +29,7 @@ task :cron do
         document = Hpricot(open("#{url_base}#{alpha_index_path}#{alpha}", "User-Agent" => "Beermongerer :: http://beermongerer.heroku.com"))
         elements = document/"#colTwo"/"ul"/"li"/"a"
         elements.each do |element|
-          data << {:text => element.inner_html.strip.gsub(/\*$/, ' (out of stock)'), :url => (url_base + element.attributes['href'])}
+          data << {:label => element.inner_html.strip.gsub(/\*$/, ' (out of stock)'), :value => (url_base + element.attributes['href'])}
         end
       end
       puts "Writing the file ..."

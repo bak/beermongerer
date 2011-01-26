@@ -1,12 +1,7 @@
 .ac_results {
-  padding: 0;
-  margin-left:7px;
   background-color: #FFF;
   overflow: hidden;
   z-index: 99999;
-}
-
-.ac_results ul {
   width: 100%;
   list-style-position: outside;
   list-style: none;
@@ -14,22 +9,9 @@
   margin: 0;
 }
 
-.ac_results li {
+.ui-menu-item li {
   margin: 0px;
   padding: 5px;
   display: block;
   overflow: hidden;
-}
-
-/*.ac_loading {
-  background: white url('indicator.gif') right center no-repeat;
-}*/
-
-.ac_odd {
-  background-color: #FFF;
-}
-
-.ac_over {
-  background-color: #393B35;
-  color: #FFF;
 }
