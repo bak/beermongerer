@@ -1,15 +1,15 @@
-.ac_results {
+ul {
   background-color: #FFF;
   overflow: hidden;
   z-index: 99999;
-  width: 100%;
+  width: 410px;
   list-style-position: outside;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.ui-menu-item li {
+li {
   margin: 0px;
   padding: 5px;
   display: block;
